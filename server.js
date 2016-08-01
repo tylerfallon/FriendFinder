@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var app = express();
 
-var port = 3000;
+var port = 3001;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -14,5 +14,5 @@ require('./app/routing/api-routes.js')(app);
 require('./app/routing/html-routes.js')(app);
 
 app.listen(port, function() {
-	console.log('Listening on port ' + PORT);
+	console.log('Listening on port ' + port);
 });
